@@ -227,6 +227,18 @@ namespace Lab2_WindowsForms
             xslt.Transform(xml, result);
         }
 
+        private void exit_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Do you want to exit the programme?", "Exit confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                Environment.Exit(0);
+            }
+        }
+
         private void Archive_Load(object sender, EventArgs e)
         {
             authorNameComboBox.Enabled = false;

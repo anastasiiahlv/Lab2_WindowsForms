@@ -271,6 +271,7 @@
             this.Controls.Add(this.checkBoxAuthorName);
             this.Name = "Archive";
             this.Text = "Archive";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.exit_FormClosing);
             this.Load += new System.EventHandler(this.Archive_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
