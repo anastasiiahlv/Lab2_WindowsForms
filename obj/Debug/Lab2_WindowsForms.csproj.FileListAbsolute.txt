@@ -1,0 +1,11 @@
+C:\Users\USER\Documents\GitHub\Lab2_WindowsForms\bin\Debug\Lab2_WindowsForms.exe.config
+C:\Users\USER\Documents\GitHub\Lab2_WindowsForms\bin\Debug\Lab2_WindowsForms.exe
+C:\Users\USER\Documents\GitHub\Lab2_WindowsForms\bin\Debug\Lab2_WindowsForms.pdb
+C:\Users\USER\Documents\GitHub\Lab2_WindowsForms\obj\Debug\Lab2_WindowsForms.csproj.AssemblyReference.cache
+C:\Users\USER\Documents\GitHub\Lab2_WindowsForms\obj\Debug\Lab2_WindowsForms.csproj.SuggestedBindingRedirects.cache
+C:\Users\USER\Documents\GitHub\Lab2_WindowsForms\obj\Debug\Lab2_WindowsForms.Archive.resources
+C:\Users\USER\Documents\GitHub\Lab2_WindowsForms\obj\Debug\Lab2_WindowsForms.Properties.Resources.resources
+C:\Users\USER\Documents\GitHub\Lab2_WindowsForms\obj\Debug\Lab2_WindowsForms.csproj.GenerateResource.cache
+C:\Users\USER\Documents\GitHub\Lab2_WindowsForms\obj\Debug\Lab2_WindowsForms.csproj.CoreCompileInputs.cache
+C:\Users\USER\Documents\GitHub\Lab2_WindowsForms\obj\Debug\Lab2_WindowsForms.exe
+C:\Users\USER\Documents\GitHub\Lab2_WindowsForms\obj\Debug\Lab2_WindowsForms.pdb
