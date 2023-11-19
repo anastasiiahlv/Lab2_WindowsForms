@@ -11,7 +11,7 @@ namespace Lab2_WindowsForms
     {
         public List<Material> Search(Material material, string path)
         {
-            List<Material> result = new List<Material>();
+            List<Material> searchRresult = new List<Material>();
             XDocument xDoc = XDocument.Load(path);
 
             List<XElement> searchedMaterials = (from obj in xDoc.Descendants("Material")
@@ -38,9 +38,9 @@ namespace Lab2_WindowsForms
                 myMaterial.CreationDate = m.Attribute("CreationDate").Value;
 
 
-                result.Add(myMaterial);
+                searchRresult.Add(myMaterial);
             }
-            return result;
+            return searchRresult;
         }
     }
 }

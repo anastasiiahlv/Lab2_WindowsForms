@@ -11,7 +11,7 @@ namespace Lab2_WindowsForms
     {
         public List<Material> Search(Material material, string path)
         {
-            List<Material> result = new List<Material>();
+            List<Material> searchResult = new List<Material>();
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(path);
 
@@ -70,10 +70,10 @@ namespace Lab2_WindowsForms
                     myMaterial.Type = Type;
                     myMaterial.CreationDate = CreationDate;
 
-                    result.Add(myMaterial);
+                    searchResult.Add(myMaterial);
                 }
             }
-            return result;
+            return searchResult;
         }
     }
 }

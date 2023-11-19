@@ -22,7 +22,7 @@ namespace Lab2_WindowsForms
             InitializeComponent();
         }
 
-        public void GetAllMaterials()
+        private void GetAllMaterialsInComboBox()
         {
             XmlDocument doc = new XmlDocument();
             doc.Load("C:\\Users\\USER\\Documents\\GitHub\\Lab2_WindowsForms\\XMLFile1.xml");
@@ -37,75 +37,75 @@ namespace Lab2_WindowsForms
             }
         }
 
-        public void AddItems(XmlNode n)
+        private void AddItems(XmlNode n)
         {
 
-            if (!authorNameBox.Items.Contains(n.SelectSingleNode("@AuthorName").Value))
-                authorNameBox.Items.Add(n.SelectSingleNode("@AuthorName").Value);
+            if (!authorNameComboBox.Items.Contains(n.SelectSingleNode("@AuthorName").Value))
+                authorNameComboBox.Items.Add(n.SelectSingleNode("@AuthorName").Value);
 
-            if (!nameBox.Items.Contains(n.SelectSingleNode("@Name").Value))
-                nameBox.Items.Add(n.SelectSingleNode("@Name").Value);
+            if (!nameComboBox.Items.Contains(n.SelectSingleNode("@Name").Value))
+                nameComboBox.Items.Add(n.SelectSingleNode("@Name").Value);
 
-            if (!facultyBox.Items.Contains(n.SelectSingleNode("@Faculty").Value))
-                facultyBox.Items.Add(n.SelectSingleNode("@Faculty").Value);
+            if (!facultyComboBox.Items.Contains(n.SelectSingleNode("@Faculty").Value))
+                facultyComboBox.Items.Add(n.SelectSingleNode("@Faculty").Value);
 
-            if (!departmentBox.Items.Contains(n.SelectSingleNode("@Department").Value))
-                departmentBox.Items.Add(n.SelectSingleNode("@Department").Value);
+            if (!departmentComboBox.Items.Contains(n.SelectSingleNode("@Department").Value))
+                departmentComboBox.Items.Add(n.SelectSingleNode("@Department").Value);
 
-            if (!typeBox.Items.Contains(n.SelectSingleNode("@Type").Value))
-                typeBox.Items.Add(n.SelectSingleNode("@Type").Value);
+            if (!typeComboBox.Items.Contains(n.SelectSingleNode("@Type").Value))
+                typeComboBox.Items.Add(n.SelectSingleNode("@Type").Value);
 
-            if (!creationDateBox.Items.Contains(n.SelectSingleNode("@CreationDate").Value))
-                creationDateBox.Items.Add(n.SelectSingleNode("@CreationDate").Value);
+            if (!creationDateComboBox.Items.Contains(n.SelectSingleNode("@CreationDate").Value))
+                creationDateComboBox.Items.Add(n.SelectSingleNode("@CreationDate").Value);
         }
-        public void SearchButton_Click(object sender, EventArgs e)
+        private void SearchButton_Click(object sender, EventArgs e)
         {
             searchMaterials();
         }
 
         private void searchMaterials()
         {
+            showResultRichTextBox.Clear();
             string path = "C:\\Users\\USER\\Documents\\GitHub\\Lab2_WindowsForms\\XMLFile1.xml";
-            showResultBox.Clear();
             Material material = new Material();
 
-            if (checkAuthorName.Checked)
-                material.AuthorName = authorNameBox.SelectedItem.ToString();
+            if (checkBoxAuthorName.Checked)
+                material.AuthorName = authorNameComboBox.SelectedItem?.ToString();
 
-            if (checkMaterialName.Checked)
-                material.Name = nameBox.SelectedItem.ToString();
+            if (checkBoxMaterialName.Checked)
+                material.Name = nameComboBox.SelectedItem?.ToString();
 
-            if (checkFaculty.Checked)
-                material.Faculty = facultyBox.SelectedItem.ToString();
+            if (checkBoxFaculty.Checked)
+                material.Faculty = facultyComboBox.SelectedItem?.ToString();
 
-            if (checkDepartment.Checked)
-                material.Department = departmentBox.SelectedItem.ToString();
+            if (checkBoxDepartment.Checked)
+                material.Department = departmentComboBox.SelectedItem?.ToString();
 
-            if (checkType.Checked)
-                material.Type = typeBox.SelectedItem.ToString();
+            if (checkBoxType.Checked)
+                material.Type = typeComboBox.SelectedItem?.ToString();
 
-            if (checkCreationDate.Checked)
-                material.CreationDate = creationDateBox.SelectedItem.ToString();
+            if (checkBoxCreationDate.Checked)
+                material.CreationDate = creationDateComboBox.SelectedItem?.ToString();
 
-            ISearch search = new LINQ();
+            ISearch searchMethod = new LINQ();
 
             if (DOM.Checked)
-                search = new DOM();
+                searchMethod = new DOM();
             if (SAX.Checked)
-                search = new SAX();
+                searchMethod = new SAX();
             if (LINQ.Checked)
-                search = new LINQ();
+                searchMethod = new LINQ();
 
-            List<Material> materials = search.Search(material, path);
+            List<Material> materials = searchMethod.Search(material, path);
 
             foreach (Material m in materials)
             {
-                showResultBox.AppendText(m.AuthorName + "\n");
-                showResultBox.AppendText(m.Name + "\n");
-                showResultBox.AppendText(m.Faculty + "\n");
-                showResultBox.AppendText(m.Department + "\n");
-                showResultBox.AppendText(m.Type + "\n");
-                showResultBox.AppendText(m.CreationDate + "\n\n\n");
+                showResultRichTextBox.AppendText(m.AuthorName + "\n");
+                showResultRichTextBox.AppendText(m.Name + "\n");
+                showResultRichTextBox.AppendText(m.Faculty + "\n");
+                showResultRichTextBox.AppendText(m.Department + "\n");
+                showResultRichTextBox.AppendText(m.Type + "\n");
+                showResultRichTextBox.AppendText(m.CreationDate + "\n\n\n");
             }
         }
 
@@ -116,62 +116,62 @@ namespace Lab2_WindowsForms
             switch(temp.Text)
             {
                 case "Author's Name":
-                    if (checkAuthorName.CheckState == CheckState.Checked)
-                        authorNameBox.Enabled = true;
+                    if (checkBoxAuthorName.CheckState == CheckState.Checked)
+                        authorNameComboBox.Enabled = true;
                     else
                     {
-                        authorNameBox.Enabled = false;
-                        authorNameBox.Text = null;
+                        authorNameComboBox.Enabled = false;
+                        authorNameComboBox.Text = null;
                     }
                     break;
 
                 case "Name":
-                    if (checkMaterialName.CheckState == CheckState.Checked)
-                        nameBox.Enabled = true;
+                    if (checkBoxMaterialName.CheckState == CheckState.Checked)
+                        nameComboBox.Enabled = true;
                     else
                     {
-                        nameBox.Enabled = false;
-                        nameBox.Text = null;
+                        nameComboBox.Enabled = false;
+                        nameComboBox.Text = null;
                     }
                     break;
 
                 case "Faculty":
-                    if (checkFaculty.CheckState == CheckState.Checked)
-                        facultyBox.Enabled = true;
+                    if (checkBoxFaculty.CheckState == CheckState.Checked)
+                        facultyComboBox.Enabled = true;
                     else
                     {
-                        facultyBox.Enabled = false;
-                        facultyBox.Text = null;
+                        facultyComboBox.Enabled = false;
+                        facultyComboBox.Text = null;
                     }
                     break;
 
                 case "Department":
-                    if (checkDepartment.CheckState == CheckState.Checked)
-                        departmentBox.Enabled = true;
+                    if (checkBoxDepartment.CheckState == CheckState.Checked)
+                        departmentComboBox.Enabled = true;
                     else
                     {
-                        departmentBox.Enabled = false;
-                        departmentBox.Text = null;
+                        departmentComboBox.Enabled = false;
+                        departmentComboBox.Text = null;
                     }
                     break;
 
                 case "Type":
-                    if (checkType.CheckState == CheckState.Checked)
-                        typeBox.Enabled = true;
+                    if (checkBoxType.CheckState == CheckState.Checked)
+                        typeComboBox.Enabled = true;
                     else
                     {
-                        typeBox.Enabled = false;
-                        typeBox.Text = null;
+                        typeComboBox.Enabled = false;
+                        typeComboBox.Text = null;
                     }
                     break;
 
                 case "Creation Date":
-                    if (checkCreationDate.CheckState == CheckState.Checked)
-                        creationDateBox.Enabled = true;
+                    if (checkBoxCreationDate.CheckState == CheckState.Checked)
+                        creationDateComboBox.Enabled = true;
                     else
                     {
-                        creationDateBox.Enabled = false;
-                        creationDateBox.Text = null;
+                        creationDateComboBox.Enabled = false;
+                        creationDateComboBox.Text = null;
                     }
                     break;
             }   
@@ -180,47 +180,35 @@ namespace Lab2_WindowsForms
 
         private void Clear_Click(object sender, EventArgs e)
         {
-            showResultBox.Text = "";
+            showResultRichTextBox.Text = "";
 
-            checkAuthorName.Checked = false;
-            authorNameBox.Enabled = false;
-            authorNameBox.Text = null;
+            checkBoxAuthorName.Checked = false;
+            authorNameComboBox.Enabled = false;
+            authorNameComboBox.Text = null;
 
-            checkMaterialName.Checked = false;
-            nameBox.Enabled = false;
-            nameBox.Text = null;
+            checkBoxMaterialName.Checked = false;
+            nameComboBox.Enabled = false;
+            nameComboBox.Text = null;
 
-            checkFaculty.Checked = false;
-            facultyBox.Enabled = false;
-            facultyBox.Text = null;
+            checkBoxFaculty.Checked = false;
+            facultyComboBox.Enabled = false;
+            facultyComboBox.Text = null;
 
-            checkDepartment.Checked = false;
-            departmentBox.Enabled = false;
-            departmentBox.Text = null;
+            checkBoxDepartment.Checked = false;
+            departmentComboBox.Enabled = false;
+            departmentComboBox.Text = null;
 
-            checkType.Checked = false;
-            typeBox.Enabled = false;
-            typeBox.Text = null;
+            checkBoxType.Checked = false;
+            typeComboBox.Enabled = false;
+            typeComboBox.Text = null;
 
-            checkCreationDate.Checked = false;
-            creationDateBox.Enabled = false;
-            creationDateBox.Text = null;
+            checkBoxCreationDate.Checked = false;
+            creationDateComboBox.Enabled = false;
+            creationDateComboBox.Text = null;
 
-            DOM.Checked = false;
+            /*DOM.Checked = false;
             SAX.Checked = false;
-            LINQ.Checked = false;
-        }
-
-        private void Archive_Load(object sender, EventArgs e)
-        {
-            authorNameBox.Enabled = false;
-            nameBox.Enabled = false;
-            facultyBox.Enabled = false;
-            departmentBox.Enabled = false;
-            typeBox.Enabled = false;
-            creationDateBox.Enabled = false;
-
-            GetAllMaterials();
+            LINQ.Checked = false;*/
         }
 
         private void TransformHtml_Click(object sender, EventArgs e)
@@ -228,15 +216,27 @@ namespace Lab2_WindowsForms
 
             XslCompiledTransform xslt = new XslCompiledTransform();
 
-            string f1 = "C:\\Users\\USER\\Documents\\GitHub\\Lab2_WindowsForms\\XSL.xsl";
+            string xsl = "C:\\Users\\USER\\Documents\\GitHub\\Lab2_WindowsForms\\XSL.xsl";
 
-            xslt.Load(f1);
+            xslt.Load(xsl);
 
             string xml = "C:\\Users\\USER\\Documents\\GitHub\\Lab2_WindowsForms\\XMLFile1.xml";
 
             string result = @"HtmlResult.html";
 
             xslt.Transform(xml, result);
+        }
+
+        private void Archive_Load(object sender, EventArgs e)
+        {
+            authorNameComboBox.Enabled = false;
+            nameComboBox.Enabled = false;
+            facultyComboBox.Enabled = false;
+            departmentComboBox.Enabled = false;
+            typeComboBox.Enabled = false;
+            creationDateComboBox.Enabled = false;
+
+            GetAllMaterialsInComboBox();
         }
     }
 }

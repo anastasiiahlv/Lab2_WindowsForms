@@ -28,146 +28,146 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkAuthorName = new System.Windows.Forms.CheckBox();
-            this.checkMaterialName = new System.Windows.Forms.CheckBox();
-            this.checkFaculty = new System.Windows.Forms.CheckBox();
-            this.checkDepartment = new System.Windows.Forms.CheckBox();
-            this.checkType = new System.Windows.Forms.CheckBox();
-            this.checkCreationDate = new System.Windows.Forms.CheckBox();
-            this.authorNameBox = new System.Windows.Forms.ComboBox();
-            this.nameBox = new System.Windows.Forms.ComboBox();
-            this.facultyBox = new System.Windows.Forms.ComboBox();
-            this.departmentBox = new System.Windows.Forms.ComboBox();
-            this.typeBox = new System.Windows.Forms.ComboBox();
-            this.creationDateBox = new System.Windows.Forms.ComboBox();
+            this.checkBoxAuthorName = new System.Windows.Forms.CheckBox();
+            this.checkBoxMaterialName = new System.Windows.Forms.CheckBox();
+            this.checkBoxFaculty = new System.Windows.Forms.CheckBox();
+            this.checkBoxDepartment = new System.Windows.Forms.CheckBox();
+            this.checkBoxType = new System.Windows.Forms.CheckBox();
+            this.checkBoxCreationDate = new System.Windows.Forms.CheckBox();
+            this.authorNameComboBox = new System.Windows.Forms.ComboBox();
+            this.nameComboBox = new System.Windows.Forms.ComboBox();
+            this.facultyComboBox = new System.Windows.Forms.ComboBox();
+            this.departmentComboBox = new System.Windows.Forms.ComboBox();
+            this.typeComboBox = new System.Windows.Forms.ComboBox();
+            this.creationDateComboBox = new System.Windows.Forms.ComboBox();
             this.DOM = new System.Windows.Forms.RadioButton();
             this.SAX = new System.Windows.Forms.RadioButton();
             this.LINQ = new System.Windows.Forms.RadioButton();
-            this.showResultBox = new System.Windows.Forms.RichTextBox();
+            this.showResultRichTextBox = new System.Windows.Forms.RichTextBox();
             this.SearchButton = new System.Windows.Forms.Button();
             this.HtmlButton = new System.Windows.Forms.Button();
             this.ClearButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // checkAuthorName
+            // checkBoxAuthorName
             // 
-            this.checkAuthorName.AutoSize = true;
-            this.checkAuthorName.Location = new System.Drawing.Point(34, 21);
-            this.checkAuthorName.Name = "checkAuthorName";
-            this.checkAuthorName.Size = new System.Drawing.Size(117, 20);
-            this.checkAuthorName.TabIndex = 0;
-            this.checkAuthorName.Text = "Author\'s Name";
-            this.checkAuthorName.UseVisualStyleBackColor = true;
-            this.checkAuthorName.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            this.checkBoxAuthorName.AutoSize = true;
+            this.checkBoxAuthorName.Location = new System.Drawing.Point(34, 21);
+            this.checkBoxAuthorName.Name = "checkBoxAuthorName";
+            this.checkBoxAuthorName.Size = new System.Drawing.Size(117, 20);
+            this.checkBoxAuthorName.TabIndex = 0;
+            this.checkBoxAuthorName.Text = "Author\'s Name";
+            this.checkBoxAuthorName.UseVisualStyleBackColor = true;
+            this.checkBoxAuthorName.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
-            // checkMaterialName
+            // checkBoxMaterialName
             // 
-            this.checkMaterialName.AutoSize = true;
-            this.checkMaterialName.Location = new System.Drawing.Point(34, 59);
-            this.checkMaterialName.Name = "checkMaterialName";
-            this.checkMaterialName.Size = new System.Drawing.Size(66, 20);
-            this.checkMaterialName.TabIndex = 1;
-            this.checkMaterialName.Text = "Name";
-            this.checkMaterialName.UseVisualStyleBackColor = true;
-            this.checkMaterialName.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            this.checkBoxMaterialName.AutoSize = true;
+            this.checkBoxMaterialName.Location = new System.Drawing.Point(34, 59);
+            this.checkBoxMaterialName.Name = "checkBoxMaterialName";
+            this.checkBoxMaterialName.Size = new System.Drawing.Size(66, 20);
+            this.checkBoxMaterialName.TabIndex = 1;
+            this.checkBoxMaterialName.Text = "Name";
+            this.checkBoxMaterialName.UseVisualStyleBackColor = true;
+            this.checkBoxMaterialName.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
-            // checkFaculty
+            // checkBoxFaculty
             // 
-            this.checkFaculty.AutoSize = true;
-            this.checkFaculty.Location = new System.Drawing.Point(34, 96);
-            this.checkFaculty.Name = "checkFaculty";
-            this.checkFaculty.Size = new System.Drawing.Size(72, 20);
-            this.checkFaculty.TabIndex = 2;
-            this.checkFaculty.Text = "Faculty";
-            this.checkFaculty.UseVisualStyleBackColor = true;
-            this.checkFaculty.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            this.checkBoxFaculty.AutoSize = true;
+            this.checkBoxFaculty.Location = new System.Drawing.Point(34, 96);
+            this.checkBoxFaculty.Name = "checkBoxFaculty";
+            this.checkBoxFaculty.Size = new System.Drawing.Size(72, 20);
+            this.checkBoxFaculty.TabIndex = 2;
+            this.checkBoxFaculty.Text = "Faculty";
+            this.checkBoxFaculty.UseVisualStyleBackColor = true;
+            this.checkBoxFaculty.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
-            // checkDepartment
+            // checkBoxDepartment
             // 
-            this.checkDepartment.AutoSize = true;
-            this.checkDepartment.Location = new System.Drawing.Point(34, 131);
-            this.checkDepartment.Name = "checkDepartment";
-            this.checkDepartment.Size = new System.Drawing.Size(99, 20);
-            this.checkDepartment.TabIndex = 3;
-            this.checkDepartment.Text = "Department";
-            this.checkDepartment.UseVisualStyleBackColor = true;
-            this.checkDepartment.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            this.checkBoxDepartment.AutoSize = true;
+            this.checkBoxDepartment.Location = new System.Drawing.Point(34, 131);
+            this.checkBoxDepartment.Name = "checkBoxDepartment";
+            this.checkBoxDepartment.Size = new System.Drawing.Size(99, 20);
+            this.checkBoxDepartment.TabIndex = 3;
+            this.checkBoxDepartment.Text = "Department";
+            this.checkBoxDepartment.UseVisualStyleBackColor = true;
+            this.checkBoxDepartment.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
-            // checkType
+            // checkBoxType
             // 
-            this.checkType.AutoSize = true;
-            this.checkType.Location = new System.Drawing.Point(34, 168);
-            this.checkType.Name = "checkType";
-            this.checkType.Size = new System.Drawing.Size(61, 20);
-            this.checkType.TabIndex = 4;
-            this.checkType.Text = "Type";
-            this.checkType.UseVisualStyleBackColor = true;
-            this.checkType.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            this.checkBoxType.AutoSize = true;
+            this.checkBoxType.Location = new System.Drawing.Point(34, 168);
+            this.checkBoxType.Name = "checkBoxType";
+            this.checkBoxType.Size = new System.Drawing.Size(61, 20);
+            this.checkBoxType.TabIndex = 4;
+            this.checkBoxType.Text = "Type";
+            this.checkBoxType.UseVisualStyleBackColor = true;
+            this.checkBoxType.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
-            // checkCreationDate
+            // checkBoxCreationDate
             // 
-            this.checkCreationDate.AutoSize = true;
-            this.checkCreationDate.Location = new System.Drawing.Point(34, 203);
-            this.checkCreationDate.Name = "checkCreationDate";
-            this.checkCreationDate.Size = new System.Drawing.Size(111, 20);
-            this.checkCreationDate.TabIndex = 5;
-            this.checkCreationDate.Text = "Creation Date";
-            this.checkCreationDate.UseVisualStyleBackColor = true;
-            this.checkCreationDate.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            this.checkBoxCreationDate.AutoSize = true;
+            this.checkBoxCreationDate.Location = new System.Drawing.Point(34, 203);
+            this.checkBoxCreationDate.Name = "checkBoxCreationDate";
+            this.checkBoxCreationDate.Size = new System.Drawing.Size(111, 20);
+            this.checkBoxCreationDate.TabIndex = 5;
+            this.checkBoxCreationDate.Text = "Creation Date";
+            this.checkBoxCreationDate.UseVisualStyleBackColor = true;
+            this.checkBoxCreationDate.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
-            // authorNameBox
+            // authorNameComboBox
             // 
-            this.authorNameBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.authorNameBox.FormattingEnabled = true;
-            this.authorNameBox.Location = new System.Drawing.Point(178, 17);
-            this.authorNameBox.Name = "authorNameBox";
-            this.authorNameBox.Size = new System.Drawing.Size(121, 24);
-            this.authorNameBox.TabIndex = 6;
+            this.authorNameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.authorNameComboBox.FormattingEnabled = true;
+            this.authorNameComboBox.Location = new System.Drawing.Point(178, 17);
+            this.authorNameComboBox.Name = "authorNameComboBox";
+            this.authorNameComboBox.Size = new System.Drawing.Size(121, 24);
+            this.authorNameComboBox.TabIndex = 6;
             // 
-            // nameBox
+            // nameComboBox
             // 
-            this.nameBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.nameBox.FormattingEnabled = true;
-            this.nameBox.Location = new System.Drawing.Point(178, 55);
-            this.nameBox.Name = "nameBox";
-            this.nameBox.Size = new System.Drawing.Size(121, 24);
-            this.nameBox.TabIndex = 7;
+            this.nameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.nameComboBox.FormattingEnabled = true;
+            this.nameComboBox.Location = new System.Drawing.Point(178, 55);
+            this.nameComboBox.Name = "nameComboBox";
+            this.nameComboBox.Size = new System.Drawing.Size(121, 24);
+            this.nameComboBox.TabIndex = 7;
             // 
-            // facultyBox
+            // facultyComboBox
             // 
-            this.facultyBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.facultyBox.FormattingEnabled = true;
-            this.facultyBox.Location = new System.Drawing.Point(178, 92);
-            this.facultyBox.Name = "facultyBox";
-            this.facultyBox.Size = new System.Drawing.Size(121, 24);
-            this.facultyBox.TabIndex = 8;
+            this.facultyComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.facultyComboBox.FormattingEnabled = true;
+            this.facultyComboBox.Location = new System.Drawing.Point(178, 92);
+            this.facultyComboBox.Name = "facultyComboBox";
+            this.facultyComboBox.Size = new System.Drawing.Size(121, 24);
+            this.facultyComboBox.TabIndex = 8;
             // 
-            // departmentBox
+            // departmentComboBox
             // 
-            this.departmentBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.departmentBox.FormattingEnabled = true;
-            this.departmentBox.Location = new System.Drawing.Point(178, 127);
-            this.departmentBox.Name = "departmentBox";
-            this.departmentBox.Size = new System.Drawing.Size(121, 24);
-            this.departmentBox.TabIndex = 9;
+            this.departmentComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.departmentComboBox.FormattingEnabled = true;
+            this.departmentComboBox.Location = new System.Drawing.Point(178, 127);
+            this.departmentComboBox.Name = "departmentComboBox";
+            this.departmentComboBox.Size = new System.Drawing.Size(121, 24);
+            this.departmentComboBox.TabIndex = 9;
             // 
-            // typeBox
+            // typeComboBox
             // 
-            this.typeBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.typeBox.FormattingEnabled = true;
-            this.typeBox.Location = new System.Drawing.Point(178, 164);
-            this.typeBox.Name = "typeBox";
-            this.typeBox.Size = new System.Drawing.Size(121, 24);
-            this.typeBox.TabIndex = 10;
+            this.typeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.typeComboBox.FormattingEnabled = true;
+            this.typeComboBox.Location = new System.Drawing.Point(178, 164);
+            this.typeComboBox.Name = "typeComboBox";
+            this.typeComboBox.Size = new System.Drawing.Size(121, 24);
+            this.typeComboBox.TabIndex = 10;
             // 
-            // creationDateBox
+            // creationDateComboBox
             // 
-            this.creationDateBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.creationDateBox.FormattingEnabled = true;
-            this.creationDateBox.Location = new System.Drawing.Point(178, 199);
-            this.creationDateBox.Name = "creationDateBox";
-            this.creationDateBox.Size = new System.Drawing.Size(121, 24);
-            this.creationDateBox.TabIndex = 11;
+            this.creationDateComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.creationDateComboBox.FormattingEnabled = true;
+            this.creationDateComboBox.Location = new System.Drawing.Point(178, 199);
+            this.creationDateComboBox.Name = "creationDateComboBox";
+            this.creationDateComboBox.Size = new System.Drawing.Size(121, 24);
+            this.creationDateComboBox.TabIndex = 11;
             // 
             // DOM
             // 
@@ -205,15 +205,15 @@
             this.LINQ.UseVisualStyleBackColor = true;
             this.LINQ.CheckedChanged += new System.EventHandler(this.SearchButton_Click);
             // 
-            // showResultBox
+            // showResultRichTextBox
             // 
-            this.showResultBox.Location = new System.Drawing.Point(338, 17);
-            this.showResultBox.Name = "showResultBox";
-            this.showResultBox.ReadOnly = true;
-            this.showResultBox.Size = new System.Drawing.Size(450, 421);
-            this.showResultBox.TabIndex = 15;
-            this.showResultBox.TabStop = false;
-            this.showResultBox.Text = "";
+            this.showResultRichTextBox.Location = new System.Drawing.Point(338, 17);
+            this.showResultRichTextBox.Name = "showResultRichTextBox";
+            this.showResultRichTextBox.ReadOnly = true;
+            this.showResultRichTextBox.Size = new System.Drawing.Size(450, 421);
+            this.showResultRichTextBox.TabIndex = 15;
+            this.showResultRichTextBox.TabStop = false;
+            this.showResultRichTextBox.Text = "";
             // 
             // SearchButton
             // 
@@ -253,22 +253,22 @@
             this.Controls.Add(this.ClearButton);
             this.Controls.Add(this.HtmlButton);
             this.Controls.Add(this.SearchButton);
-            this.Controls.Add(this.showResultBox);
+            this.Controls.Add(this.showResultRichTextBox);
             this.Controls.Add(this.LINQ);
             this.Controls.Add(this.SAX);
             this.Controls.Add(this.DOM);
-            this.Controls.Add(this.creationDateBox);
-            this.Controls.Add(this.typeBox);
-            this.Controls.Add(this.departmentBox);
-            this.Controls.Add(this.facultyBox);
-            this.Controls.Add(this.nameBox);
-            this.Controls.Add(this.authorNameBox);
-            this.Controls.Add(this.checkCreationDate);
-            this.Controls.Add(this.checkType);
-            this.Controls.Add(this.checkDepartment);
-            this.Controls.Add(this.checkFaculty);
-            this.Controls.Add(this.checkMaterialName);
-            this.Controls.Add(this.checkAuthorName);
+            this.Controls.Add(this.creationDateComboBox);
+            this.Controls.Add(this.typeComboBox);
+            this.Controls.Add(this.departmentComboBox);
+            this.Controls.Add(this.facultyComboBox);
+            this.Controls.Add(this.nameComboBox);
+            this.Controls.Add(this.authorNameComboBox);
+            this.Controls.Add(this.checkBoxCreationDate);
+            this.Controls.Add(this.checkBoxType);
+            this.Controls.Add(this.checkBoxDepartment);
+            this.Controls.Add(this.checkBoxFaculty);
+            this.Controls.Add(this.checkBoxMaterialName);
+            this.Controls.Add(this.checkBoxAuthorName);
             this.Name = "Archive";
             this.Text = "Archive";
             this.Load += new System.EventHandler(this.Archive_Load);
@@ -279,22 +279,22 @@
 
         #endregion
 
-        private System.Windows.Forms.CheckBox checkAuthorName;
-        private System.Windows.Forms.CheckBox checkMaterialName;
-        private System.Windows.Forms.CheckBox checkFaculty;
-        private System.Windows.Forms.CheckBox checkDepartment;
-        private System.Windows.Forms.CheckBox checkType;
-        private System.Windows.Forms.CheckBox checkCreationDate;
-        private System.Windows.Forms.ComboBox authorNameBox;
-        private System.Windows.Forms.ComboBox nameBox;
-        private System.Windows.Forms.ComboBox facultyBox;
-        private System.Windows.Forms.ComboBox departmentBox;
-        private System.Windows.Forms.ComboBox typeBox;
-        private System.Windows.Forms.ComboBox creationDateBox;
+        private System.Windows.Forms.CheckBox checkBoxAuthorName;
+        private System.Windows.Forms.CheckBox checkBoxMaterialName;
+        private System.Windows.Forms.CheckBox checkBoxFaculty;
+        private System.Windows.Forms.CheckBox checkBoxDepartment;
+        private System.Windows.Forms.CheckBox checkBoxType;
+        private System.Windows.Forms.CheckBox checkBoxCreationDate;
+        private System.Windows.Forms.ComboBox authorNameComboBox;
+        private System.Windows.Forms.ComboBox nameComboBox;
+        private System.Windows.Forms.ComboBox facultyComboBox;
+        private System.Windows.Forms.ComboBox departmentComboBox;
+        private System.Windows.Forms.ComboBox typeComboBox;
+        private System.Windows.Forms.ComboBox creationDateComboBox;
         private System.Windows.Forms.RadioButton DOM;
         private System.Windows.Forms.RadioButton SAX;
         private System.Windows.Forms.RadioButton LINQ;
-        private System.Windows.Forms.RichTextBox showResultBox;
+        private System.Windows.Forms.RichTextBox showResultRichTextBox;
         private System.Windows.Forms.Button SearchButton;
         private System.Windows.Forms.Button HtmlButton;
         private System.Windows.Forms.Button ClearButton;
